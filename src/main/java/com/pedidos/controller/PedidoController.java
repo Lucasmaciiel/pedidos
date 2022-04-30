@@ -1,26 +1,27 @@
-package com.transacoes.financeiras.controller;
+package com.pedidos.controller;
 
-import com.transacoes.financeiras.service.PedidoService;
+import com.pedidos.service.PedidoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class PedidoController {
 
 
-    public static final String HOME = "home";
+    public static final String NOME_VIEW = "home";
 
     @Autowired
     private PedidoService pedidoService;
 
     @GetMapping("/home")
-    public String findAll(Model model) {
+    public ModelAndView findAll() {
 
         var pedidos = pedidoService.findAll();
-        model.addAttribute("pedidos", pedidos);
+        ModelAndView modelAndView = new ModelAndView(NOME_VIEW);
+        modelAndView.addObject("pedidos", pedidos);
 
-        return HOME;
+        return modelAndView;
     }
 }

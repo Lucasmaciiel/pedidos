@@ -1,4 +1,4 @@
-package com.transacoes.financeiras.model;
+package com.pedidos.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

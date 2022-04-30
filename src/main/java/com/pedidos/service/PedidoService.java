@@ -1,7 +1,7 @@
-package com.transacoes.financeiras.service;
+package com.pedidos.service;
 
-import com.transacoes.financeiras.model.Pedido;
-import com.transacoes.financeiras.repository.PedidoRepository;
+import com.pedidos.model.Pedido;
+import com.pedidos.repository.PedidoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
