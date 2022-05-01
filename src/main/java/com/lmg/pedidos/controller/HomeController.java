@@ -46,7 +46,7 @@ public class HomeController {
     /**
      * Redireciona para página home, caso o status não exista no enum
      *
-     * @return
+     * @return página que deve ser redirecioanda
      */
     @ExceptionHandler(IllegalArgumentException.class)
     public String onError() {
