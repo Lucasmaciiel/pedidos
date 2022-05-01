@@ -1,14 +1,11 @@
-package com.pedidos.controller;
+package com.lmg.pedidos.controller;
 
-import com.pedidos.model.Pedido;
-import com.pedidos.model.dto.PedidoForm;
-import com.pedidos.service.PedidoService;
+import com.lmg.pedidos.model.dto.PedidoDTO;
+import com.lmg.pedidos.service.PedidoService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -24,9 +21,9 @@ public class PedidoController {
     }
 
     @PostMapping("novo")
-    public String create(PedidoForm pedidoForm){
+    public String create(PedidoDTO pedidoDTO){
 
-        var newPedido = pedidoForm.pedidoMapper();
+        var newPedido = pedidoDTO.pedidoMapper();
         pedidoService.save(newPedido);
 
         return "home";

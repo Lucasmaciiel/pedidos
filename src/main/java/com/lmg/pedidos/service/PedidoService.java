@@ -1,7 +1,7 @@
-package com.pedidos.service;
+package com.lmg.pedidos.service;
 
-import com.pedidos.model.Pedido;
-import com.pedidos.repository.PedidoRepository;
+import com.lmg.pedidos.model.Pedido;
+import com.lmg.pedidos.repository.PedidoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

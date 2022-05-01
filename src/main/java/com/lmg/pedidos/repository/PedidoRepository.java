@@ -1,6 +1,6 @@
-package com.pedidos.repository;
+package com.lmg.pedidos.repository;
 
-import com.pedidos.model.Pedido;
+import com.lmg.pedidos.model.Pedido;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,4 +1,4 @@
-package com.pedidos.model;
+package com.lmg.pedidos.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

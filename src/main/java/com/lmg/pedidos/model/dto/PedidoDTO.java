@@ -1,6 +1,6 @@
-package com.pedidos.model.dto;
+package com.lmg.pedidos.model.dto;
 
-import com.pedidos.model.Pedido;
+import com.lmg.pedidos.model.Pedido;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -8,7 +8,7 @@ import lombok.ToString;
 @ToString
 @Getter
 @Setter
-public class PedidoForm {
+public class PedidoDTO {
 
     private String nomeProduto;
     private String urlProduto;

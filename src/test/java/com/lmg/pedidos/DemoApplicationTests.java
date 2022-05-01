@@ -1,4 +1,4 @@
-package com.pedidos;
+package com.lmg.pedidos;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
