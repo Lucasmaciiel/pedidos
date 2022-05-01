@@ -38,7 +38,7 @@ public class PedidoController {
         ModelAndView modelAndView = new ModelAndView(FORMULARIO_VIEW);
         modelAndView.addObject("requisicaoNovoPedido", requisicao);
 
-        return "formulario";
+        return "redirect:/home";
     }
 
 

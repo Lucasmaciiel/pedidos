@@ -9,6 +9,8 @@ import lombok.Setter;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -25,14 +27,18 @@ public class Pedido {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long     id;
+    private Long id;
 
-    private String     nomeProduto;
+    private String nomeProduto;
     private BigDecimal valorNegociado;
-    private LocalDate  dataEntrega;
-    private String     urlProduto;
-    private String     urlImagem;
+    private LocalDate dataEntrega;
+    private String urlProduto;
+    private String urlImagem;
     private BigDecimal valor;
-    private String     descricao;
+    private String descricao;
+
+    @Enumerated(EnumType.STRING)
+    @Builder.Default
+    private StatusPedido statusPedido = StatusPedido.AGUARDANDO;
 
 }
