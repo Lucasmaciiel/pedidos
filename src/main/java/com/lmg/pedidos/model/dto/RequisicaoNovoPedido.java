@@ -17,8 +17,6 @@ import javax.validation.constraints.NotBlank;
 public class RequisicaoNovoPedido {
 
     @NotBlank
-    @Min(5)
-    @Max(200)
     private String nomeProduto;
 
     @NotBlank
