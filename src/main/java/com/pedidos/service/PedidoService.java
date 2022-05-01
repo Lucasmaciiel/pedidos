@@ -16,4 +16,10 @@ public class PedidoService {
     public List<Pedido> findAll() {
         return pedidoRepository.findAll();
     }
+
+    public Pedido save(Pedido pedido) {
+        var newPedido = pedidoRepository.save(pedido);
+        System.out.println("Novo pedido criado com sucesso" + newPedido);
+        return newPedido;
+    }
 }
