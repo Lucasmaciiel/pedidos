@@ -7,14 +7,18 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 
 @ToString
 @Getter
 @Setter
-public class PedidoDto {
+public class RequisicaoNovoPedido {
 
     @NotBlank
+    @Min(5)
+    @Max(200)
     private String nomeProduto;
 
     @NotBlank
@@ -23,7 +27,6 @@ public class PedidoDto {
     @NotBlank
     private String urlImagem;
 
-    @NotBlank
     private String descricao;
 
     public Pedido pedidoMapper() {

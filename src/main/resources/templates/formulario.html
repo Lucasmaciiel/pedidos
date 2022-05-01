@@ -12,26 +12,40 @@
             </div>
 
             <div class="card mt-3">
-                <form th:object="${requisicaoNovoPedido}" class="card-body" action="/pedido/novo" method="post">
+                <form  th:object="${requisicaoNovoPedido}" class="card-body" action="/pedido/novo" method="POST">
+
                     <div class="form-group mb-3">
                         <label for="nomeProduto" class="form-label">Produto</label>
-                        <input th:field="*{nomeProduto}" class="form-control" placeholder="nome do produto">
+                        <input  th:field="*{nomeProduto}" th:errorClass="is-invalid" id="nomeProduto" name="nomeProduto" class="form-control" placeholder="nome do produto">
                         <small>Informe qual o nome do produto.</small>
+                        <div class="invalid-feedback" th:errors="*{nomeProduto}">
+                            Erros do nome do produto
+                        </div>
                     </div>
+
                     <div class="form-group mb-3">
                         <label for="urlProduto" class="form-label">URL do produto</label>
-                        <input th:field="*{urlProduto}" class="form-control" placeholder="url do produto">
+                        <input th:field="*{urlProduto}" th:errorClass="is-invalid" class="form-control"  id="urlProduto" name="urlProduto" placeholder="url do produto">
                         <small>Procure em um site o produto que voce deseja e cole a url aqui.</small>
+                        <div class="invalid-feedback" th:errors="*{urlProduto}">
+                            Erros do urlProduto
+                        </div>
                     </div>
+
                     <div class="form-group mb-3">
                         <label for="urlImagem" class="form-label">URL da imagem</label>
-                        <input th:field="*{urlImagem}" class="form-control" placeholder="url da imagem">
+                        <input th:field="*{urlImagem}" th:errorClass="is-invalid" class="form-control" id="urlImagem" name="urlImagem" placeholder="url da imagem">
                         <small>Copie a url de uma boa imagem do produto e cole a url aqui para conseguir compradores.</small>
+                        <div class="invalid-feedback" th:errors="*{urlImagem}">
+                            Erros do urlImagem
+                        </div>
                     </div>
-                    <div class="form-group mb-3">
+
+                    <div class="form-group">
                         <label for="descricao" class="form-label">Descrição</label>
-                        <textarea class="form-control" name="descricao" placeholder="Adicione detalhes importantes para conseguir comprador"></textarea>
+                        <textarea th:field="*{descricao}" class="form-control" id="descricao" name="descricao" placeholder="Adicione detalhes importantes para conseguir comprador"></textarea>
                     </div>
+
                     <button type="submit" class="btn btn-primary">Cadastrar</button>
                 </form>
             </div>
