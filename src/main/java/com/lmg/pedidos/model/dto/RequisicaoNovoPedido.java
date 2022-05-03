@@ -1,14 +1,10 @@
 package com.lmg.pedidos.model.dto;
 
-import com.fasterxml.jackson.databind.annotation.JsonNaming;
 import com.lmg.pedidos.model.Pedido;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 
 @ToString

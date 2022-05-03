@@ -2,11 +2,9 @@ package com.lmg.pedidos.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Generated;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.springframework.data.jpa.repository.JpaRepository;
 
 import javax.persistence.Entity;
 import javax.persistence.EnumType;

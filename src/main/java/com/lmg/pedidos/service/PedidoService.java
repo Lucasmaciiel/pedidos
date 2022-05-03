@@ -4,6 +4,7 @@ import com.lmg.pedidos.model.Pedido;
 import com.lmg.pedidos.model.StatusPedido;
 import com.lmg.pedidos.repository.PedidoRepository;
 import com.lmg.pedidos.repository.UserRepository;
+import org.jboss.logging.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
@@ -14,6 +15,8 @@ import java.util.Objects;
 
 @Service
 public class PedidoService {
+
+    private static Logger log = Logger.getLogger(PedidoService.class);
 
    @Autowired
    private PedidoRepository pedidoRepository;
@@ -36,7 +39,7 @@ public class PedidoService {
         pedido.setUser(user);
 
         var newPedido = pedidoRepository.save(pedido);
-        System.out.println("Novo pedido criado com sucesso" + newPedido);
+        log.infof("Novo pedido criado com sucesso %s", newPedido);
         return newPedido;
     }
 
