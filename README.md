@@ -9,4 +9,10 @@ docker-compose up -d
 - Thymeleaf
 - Bootstrap
 - Spring mvc
+- Spring Security
 - Mysql
+
+## Funcionalidades
+- Crud de pedidos
+- Consulta pedidos com Status Aguardando/Aprovado/Entregue
+- Tela de Login
