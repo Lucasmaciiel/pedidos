@@ -12,7 +12,7 @@ import java.util.List;
 @Repository
 public interface PedidoRepository extends JpaRepository<Pedido, Long> {
 
-    List<Pedido> findByStatusPedido(StatusPedido statusPedido);
+    List<Pedido> findByStatusPedidoAndUser_Username(StatusPedido statusPedido, String userName);
 
     @Query("select p from Pedido p join p.user u where u.username = :username")
     List<Pedido> findAllByUser(@Param("username") String userName);

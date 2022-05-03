@@ -37,7 +37,7 @@ public class HomeController {
     @GetMapping("/{status}")
     public ModelAndView buscarTodosPorStatus(@PathVariable("status") String statusPedido) {
 
-        var pedidos = pedidoService.buscarPorStatusPedido(StatusPedido.valueOf(statusPedido.toUpperCase()));
+        var pedidos = pedidoService.buscarPorStatusPedidoEUsuario(StatusPedido.valueOf(statusPedido.toUpperCase()));
         ModelAndView modelAndView = new ModelAndView(NOME_VIEW);
         modelAndView.addObject(PEDIDOS, pedidos);
         modelAndView.addObject(STATUS, statusPedido);

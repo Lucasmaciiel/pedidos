@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.validation.Valid;
+import java.security.Principal;
 
 @Controller
 @RequestMapping("pedido")
@@ -26,7 +27,8 @@ public class PedidoController {
     }
 
     @PostMapping("novo")
-    public String create(@Valid RequisicaoNovoPedido requisicao, BindingResult result){
+    public String create(@Valid RequisicaoNovoPedido requisicao,
+                         BindingResult result){
 
         if (result.hasErrors()){
             return "formulario";
