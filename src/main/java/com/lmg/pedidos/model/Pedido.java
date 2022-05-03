@@ -11,9 +11,11 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
@@ -41,4 +43,6 @@ public class Pedido {
     @Builder.Default
     private StatusPedido statusPedido = StatusPedido.AGUARDANDO;
 
+    @ManyToOne(fetch = FetchType.LAZY) // lazy para quando listar os pedidos, não carregar os usuários junto
+    private User user;
 }

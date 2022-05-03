@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.security.Principal;
+
 @Controller
 @RequestMapping(value = "/home")
 public class HomeController {
@@ -23,9 +25,9 @@ public class HomeController {
     private PedidoService pedidoService;
 
     @GetMapping
-    public ModelAndView buscarTodos() {
+    public ModelAndView buscarTodos(Principal principal) { // principal pega as informações do usuário logado
 
-        var pedidos = pedidoService.findAll();
+        var pedidos = pedidoService.findAllByUser(principal.getName());
         ModelAndView modelAndView = new ModelAndView(NOME_VIEW);
         modelAndView.addObject(PEDIDOS, pedidos);
 

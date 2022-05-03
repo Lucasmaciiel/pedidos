@@ -14,8 +14,8 @@ public class PedidoService {
    @Autowired
    private PedidoRepository pedidoRepository;
 
-    public List<Pedido> findAll() {
-        return pedidoRepository.findAll();
+    public List<Pedido> findAllByUser(String userName) {
+        return pedidoRepository.findAllByUser(userName);
     }
 
     public Pedido save(Pedido pedido) {
