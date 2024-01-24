@@ -1,6 +1,6 @@
 version: '3.7'
 
-#para roder os services abaixo
+#para rodar os services abaixo
 #docker-compose up -d
 
 #para terminar os services abaixo

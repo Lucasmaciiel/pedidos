@@ -1,6 +1,6 @@
-# Pedidos - Em construção
+# Pedidos 
 
-Para rodar o projeto
+Subir o projeto localmente: 
 * Necessário ter o mysql instalado e configurado, se tiver o docker instalado e rodando na máquina pode usar o comando abaixo na raiz do projeto
 
 `docker-compose up -d`
@@ -18,6 +18,6 @@ Para rodar o projeto
 - Tela de Login
 
 ## Implantação
-https://lmg-pedidos.herokuapp.com
+(adicionar)
 
 
